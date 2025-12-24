@@ -11,7 +11,7 @@ df["total_price"] = df["quantity"] * df["price"]
 
 # LOAD
 engine = create_engine(
-    "postgresql://username:password@localhost:5432/etl_db"
+    "postgresql://(your-username):(your-password)@localhost:5432/(your-database-name)"
 )
 
 df.to_sql("sales", engine, if_exists="append", index=False)
